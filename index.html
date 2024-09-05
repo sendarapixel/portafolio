@@ -20,11 +20,13 @@
     rel="stylesheet">
 
   <!-- Vendor CSS Files -->
+  <script src="script.js"></script>
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/lang.css" rel="stylesheet">
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
@@ -38,21 +40,33 @@
 
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
-        <li><a href="#skills"><i class="bi bi-file-earmark-text navicon"></i><span>Skills</span></a></li>
-        <li><a href="#portfolio"><i class="bi bi-images navicon"></i><span>Portfolio</span></a></li>
-        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i><span>Services</span></a></li>
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+        <li><a href="#bga" class="active"><i class="bi bi-house navicon"></i><span id="Home">Home</span></a></li>
+        <li><a href="#about"><i class="bi bi-person navicon"></i><span id="abouts">About</span></a></li>
+        <li><a href="#skills"><i class="bi bi-file-earmark-text navicon" ></i><span id="Skills">Skills</span></a></li>
+        <li><a href="#portfolio"><i class="bi bi-images navicon"></i><span id="Portfolio">Portfolio</span></a></li>
+        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i><span id="Services">Services</span></a></li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span id="Contact">Contact</span></a></li>
+        <li>
+          <div class="dropdown">
+            <a class="btn bi bi-translate dropdown-toggle" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <span id="btnlang">Translate</span>
+            </a>
+            <ul class="dropdown-menu ">
+              <li><button onclick="changeLanguage('es')" class="dropdown-item langbtn" id="langs1">Spanish</button></li>
+              <li><button onclick="changeLanguage('en')" class="dropdown-item langbtn" id="langs2">English</button></li>
+            </ul>
+          </div>
+        </li>
       </ul>
     </nav>
 
   </header>
 
-  <main class="main">
+  <main class="main ">
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section light-background">
+    <section id="bga" class="bga hero section light-background">
 
       <img src="assets/img/hero-bg.jpg" alt="">
 
@@ -60,7 +74,7 @@
         <div class="row justify-content-center">
           <div class="col-lg-9">
             <h2>Edwin Zerpa</h2>
-            <p>I'm <span class="typed" data-typed-items="Designer, Developer, Freelancer"></span></p>
+            <p id="iam">I'm <span class="typed" data-typed-items="Designer, Developer, Freelancer"></span></p>
             <div class="social-links">
               <a href="https://www.instagram.com/sendarapixel/"><i class="bi bi-instagram"></i></a>
               <!--<a href="#"><i class="bi bi-linkedin"></i></a>-->
@@ -79,13 +93,15 @@
         <div class="container" data-aos="fade-up">
 
           <div class="section-title">
-            <h2>About</h2>
-            <p>Hey! greetings how are you doing? welcome to my portfolio I tell you that I love what I do and I enjoy my
-              work, it is for them that I give 100% of me to my client and I give them the attention they need for their
-              projects, I love challenges and since childhood I have always been passionate about knowing how technology
-              works is why I decided to focus my studies in computer science. So for me it is a pleasure to have you
-              here, I hope you enjoy my content and do not hesitate to work with me if you want a professional and safe
-              project.</p>
+            <h2 id="aboutg">About</h2>
+            <p id="hello">Hello, welcome to my portfolio. I love what I do and fully enjoy my work. That’s why I always
+              give 100%
+              to my clients and provide them with the attention they need for their projects. I’m passionate about
+              challenges, and from a young age, I’ve had a deep interest in understanding how technology works. I
+              decided to focus my studies on computer science for this very reason, and it’s a pleasure to have you
+              here. I hope you enjoy my content, and feel free to contact me if you’re looking for a professional and
+              reliable project.
+            </p>
           </div>
 
           <div class="row">
@@ -93,8 +109,8 @@
               <img src="assets/img/profile2-img.jpg" class="img-fluid" alt="">
             </div>
             <div class="col-lg-8 pt-4 pt-lg-0 content">
-              <h3>UI/UX Designer &amp; Web Developer.</h3>
-              <p class="font-italic">
+              <h3 id="hello3">UI/UX Designer &amp; Web Developer.</h3>
+              <p class="font-italic" id="hello4">
                 I am dedicated to graphic design, web design and programming.
               </p>
               <div class="row">
@@ -119,12 +135,21 @@
                   </ul>
                 </div>
               </div>
-              <p>
-                Throughout my career, I started as a designer at <strong>PHOTOSHOP</strong> and then programmed for some
-                friends in a game server as any beginner I had trouble learning so I liked more and more, and I decided
-                to learn my first language which was PHP began to take courses after courses where I learned the
-                management of networks and web servers. Currently I am co-owner partner in Amy Feroces del marketing as
-                head of development and web management.
+              <p id="hello2">
+                Throughout my professional career, I started as a designer in <strong>Photoshop</strong> and then
+                transitioned to programming by working on a game server for some friends. Initially, as with any
+                beginner, I found learning challenging, but my interest and enthusiasm for technology only grew. I then
+                decided to learn my first programming language, <strong>PHP</strong>, and dedicated myself to continuous
+                courses, gaining knowledge about networks and web servers. I also learned <strong>HTML</strong>, <strong>CSS</strong>, and <strong>Bootstrap</strong>, and
+                since there were few programmers on the game server, I leveraged my skills to program for other similar
+                servers and was recommended among game owners. I gained significant popularity in these servers, which
+                were for the game <a href="https://es.wikipedia.org/wiki/GunZ_The_Duel" target="_blank">GunZ: The
+                  Duel</a>. Here, I also delved into <strong>C#</strong> and <strong>C++</strong>, the languages used by
+                the game to run on <strong>Windows</strong>. Additionally, I focused on 3D modeling, and you can find
+                some of the 3D models I created for the game in <strong>Blender</strong> in my portfolio. I emphasize
+                this game a lot because it was the catalyst that got me started in programming, design, 3D modeling, and
+                cybersecurity. As it was a community with a low demand for developers, I easily made my way through it
+                with all the knowledge I acquired, helping my friends to have the best server possible.
               </p>
             </div>
           </div>
@@ -185,8 +210,8 @@
 
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-          <h2>Skills</h2>
-          <p>Statistics of my knowledge as a professional and languages ​​used within the programming.</p>
+          <h2 id="skills2">Skills</h2>
+          <p id="skilldesc">Statistics of my knowledge as a professional and languages ​​used within the programming.</p>
         </div><!-- End Section Title -->
 
         <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -483,8 +508,8 @@
 
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-          <h2>Portfolio</h2>
-          <p>I am a creative professional with expertise in social media management, 3D design in Blender, and website
+          <h2 id="porfoliotittle">Portfolio</h2>
+          <p id="porfdesc">I am a creative professional with expertise in social media management, 3D design in Blender, and website
             development. I have successfully created and managed Instagram ad campaigns, optimizing reach and engagement
             with the target audience. Additionally, I have skills in 3D modeling, adding unique visual value to various
             projects. I also develop functional and visually appealing websites, always aiming for an intuitive and
@@ -876,10 +901,10 @@
                       d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174">
                     </path>
                   </svg>
-                  <i class="bx bxl-dribbble"></i>
+                  <i class="bx bi-dribbble"></i>
                 </div>
                 <h4><a href="">Developer</a></h4>
-                <p>Web development, control panel, and online stores which will take your business or brand to the next
+                <p id="developer">Web development, control panel, and online stores which will take your business or brand to the next
                   level in the world of commerce.</p>
               </div>
             </div>
@@ -896,7 +921,7 @@
                   <i class="bx bx-file"></i>
                 </div>
                 <h4><a href="">SEO</a></h4>
-                <p>I optimize your site for search engines, which with a set of actions I help to improve the
+                <p id="seo">I optimize your site for search engines, which with a set of actions I help to improve the
                   positioning of your website in the list of results of Google, Bing, or other internet search engines.
                 </p>
               </div>
@@ -914,7 +939,7 @@
                   <i class="bx bx-tachometer"></i>
                 </div>
                 <h4><a href="">Diseño UX/UI</a></h4>
-                <p>App or web system design in terms of form, function, usability, ergonomics, branding and other
+                <p id="disenoui">App or web system design in terms of form, function, usability, ergonomics, branding and other
                   aspects that affect the external appearance of user interfaces in systems.</p>
               </div>
             </div>
@@ -930,7 +955,7 @@
                   <i class="bx bx-layer"></i>
                 </div>
                 <h4><a href="">Designer</a></h4>
-                <p>I help you transmit through my creative designs, the first visual impact on your company or brand,
+                <p id="designers">I help you transmit through my creative designs, the first visual impact on your company or brand,
                   making your images achieve the expectations of your customers.</p>
               </div>
             </div>
@@ -946,7 +971,7 @@
                   <i class="bx bx-file"></i>
                 </div>
                 <h4><a href="">Comunnity manager</a></h4>
-                <p>I help you build and manage your online community by managing your brand identity and image, creating
+                <p id="comunity">I help you build and manage your online community by managing your brand identity and image, creating
                   and maintaining stable and lasting relationships with your customers.</p>
               </div>
             </div>
@@ -962,7 +987,7 @@
                   <i class="bx bx-arch"></i>
                 </div>
                 <h4><a href="">Support</a></h4>
-                <p>Service by which I provide assistance to users when they have a problem using their website or
+                <p id="supports">Service by which I provide assistance to users when they have a problem using their website or
                   service, whether it is the hardware or software of an Internet server.</p>
               </div>
             </div>
@@ -1258,6 +1283,7 @@
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
+
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
@@ -1271,6 +1297,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
 
 </body>
 
