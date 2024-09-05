@@ -1,0 +1,19 @@
+.langbtn{
+    padding: 10px;
+    text-align: center;
+    margin-top: 5px;
+    transition: all;
+    transition-duration: 100ms;
+
+
+}
+
+.langbtn:hover{
+    background-color: rgb(197, 153, 238);
+}
+
+.dropdown-toggle:focus{
+    text-decoration: none;
+    outline: none;
+
+}
